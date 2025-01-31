@@ -1,0 +1,172 @@
+:root {
+  --quantum-bg-primary: #0a192f;
+  --quantum-bg-secondary: #112240;
+  --quantum-accent-primary: #64ffda;
+  --quantum-accent-secondary: #8892b0;
+  --quantum-text-primary: #e6f1ff;
+  --quantum-text-secondary: #a8b2d1;
+  --quantum-success: #00ff87;
+  --quantum-warning: #ff4d4d;
+}
+
+body.dark-mode {
+  background-color: var(--quantum-bg-primary);
+  color: var(--quantum-text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.quantum-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.quantum-header {
+  position: relative;
+  background-color: var(--quantum-bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  color: var(--quantum-text-primary);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(57, 172, 132, 0.1));
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  color: var(--quantum-accent-primary);
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  color: var(--quantum-text-secondary);
+}
+
+.quantum-card {
+  background-color: var(--quantum-bg-secondary);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+  margin-bottom: 20px;
+  border: none;
+}
+
+.quantum-card .card-header {
+  background-color: rgba(100, 255, 218, 0.1);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+  color: var(--quantum-accent-primary);
+  padding: 15px;
+}
+
+.quantum-card .card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.quantum-input-group {
+  position: relative;
+}
+
+.quantum-input {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--quantum-bg-primary);
+  border: 1px solid var(--quantum-accent-secondary);
+  border-radius: 5px;
+  color: var(--quantum-text-primary);
+  transition: all 0.3s ease;
+}
+
+.quantum-input:focus {
+  outline: none;
+  border-color: var(--quantum-accent-primary);
+  box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+}
+
+.quantum-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--quantum-accent-primary);
+  color: var(--quantum-bg-primary);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.quantum-button:hover {
+  background-color: rgba(100, 255, 218, 0.8);
+}
+
+.quantum-button-danger {
+  background-color: var(--quantum-warning);
+  color: white;
+}
+
+.quantum-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.quantum-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.quantum-table thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--quantum-bg-secondary);
+  z-index: 10;
+}
+
+.quantum-table th {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: var(--quantum-accent-primary);
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.quantum-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+  color: var(--quantum-text-secondary);
+}
+
+.quantum-table tr:hover {
+  background-color: rgba(100, 255, 218, 0.05);
+}
+
+.search-input {
+  max-width: 200px;
+  margin-left: auto;
+}
+
+.quantum-toast {
+  background-color: var(--quantum-bg-secondary);
+  color: var(--quantum-text-primary);
+  border: 1px solid var(--quantum-accent-primary);
+}
+
+@media (max-width: 768px) {
+  .quantum-table-container {
+    max-height: 300px;
+  }
+}
